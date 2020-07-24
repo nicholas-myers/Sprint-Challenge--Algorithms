@@ -98,7 +98,7 @@ class SortingRobot:
         """
         # Fill this out
         # first index is sorted rest is unsorted
-        # the robot grabs the first unsorted value and resorts the sorted list from the beginning
+        # the robot grabs the first unsorted value and resorts0. the sorted list from the beginning
         # base case
         # print(self._position)
         # check to see if robot is holding none in beginning
