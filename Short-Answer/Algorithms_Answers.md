@@ -11,7 +11,7 @@ b) This is Polynomial = O(n^c) because there are nested loops.
 
 
 c) This solution is Exponential. = O(c^n)
-    As the input increases the recursive function calls itself at a exponential rate to the size of the input.
+    As the input increases the recursive function has to call itself at a exponential rate to the size of the input.
 
 ## Exercise II
 
