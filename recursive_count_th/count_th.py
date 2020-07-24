@@ -20,6 +20,7 @@ def count_th(word):
         is_the = first + second
         new_word = word[1:]
         if is_the == "th":
+            # if the first two contain "th" return reoccured with just th to get the plus 1
             return count_th(new_word) + count_th("th")
         else:
             return count_th(new_word)

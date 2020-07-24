@@ -97,7 +97,10 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # have the robot compare things in the list to what it is holding
+        # move left and right
+        # turn the light on if holding a item
+        # turn off if not holding an item
 
 
 if __name__ == "__main__":
