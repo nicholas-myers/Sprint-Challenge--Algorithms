@@ -97,10 +97,33 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        # have the robot compare things in the list to what it is holding
-        # move left and right
-        # turn the light on if holding a item
-        # turn off if not holding an item
+        # first index is sorted rest is unsorted
+        # base case
+        if self.compare_item() == None:
+            self.move_right()
+            self.swap_item()
+            self.move_left()
+        while self.can_move_right():
+            print(self.compare_item())
+            if self.compare_item() == -1:
+                self.swap_item()
+            elif self.compare_item() == None:
+                self.swap_item()
+                self.move_right()
+                self.swap_item()
+                while self.can_move_left():
+                    self.move_left()
+            else:
+                self.move_right()
+        self.swap_item()
+        
+        return  
+
+        
+        # then go left
+        # if the held item is greater than the list item 
+        # go right again
+        
 
 
 if __name__ == "__main__":
