@@ -99,12 +99,14 @@ class SortingRobot:
         # Fill this out
         # first index is sorted rest is unsorted
         # base case
+        # print(self._position)
         if self.compare_item() == None:
             self.move_right()
             self.swap_item()
             self.move_left()
+            # self.sort()
         while self.can_move_right():
-            print(self.compare_item())
+            # print(self.compare_item())
             if self.compare_item() == -1:
                 self.swap_item()
             elif self.compare_item() == None:
@@ -113,6 +115,7 @@ class SortingRobot:
                 self.swap_item()
                 while self.can_move_left():
                     self.move_left()
+                # self.sort()
             else:
                 self.move_right()
         self.swap_item()
