@@ -97,7 +97,49 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # first index is sorted rest is unsorted
+        # the robot grabs the first unsorted value and resorts0. the sorted list from the beginning
+        # base case
+        # print(self._position)
+        # check to see if robot is holding none in beginning
+        if self.compare_item() == None:
+            # go right
+            self.move_right()
+            # get the robot to hold something
+            self.swap_item()
+            # go back to the beginning
+            self.move_left()
+            # self.sort()
+        # can we go right?
+        while self.can_move_right():
+            # print(self.compare_item())
+            # check the current value if what we are holding is less than swap it
+            if self.compare_item() == -1:
+                self.swap_item()
+            # if we have moved right and it is none
+            elif self.compare_item() == None:
+                # we swap the current list none with what the robot has
+                self.swap_item()
+                # then move right and put the None in the next index place and grab an unsorted value
+                self.move_right()
+                self.swap_item()
+                # go back to the beginning of the sorted list and check what we have and resort
+                while self.can_move_left():
+                    self.move_left()
+                # self.sort()
+            else:
+                # otherwise keep moving right
+                self.move_right()
+        # when we get to the end of the list make sure that the robot has none and the list is completely sorted
+        self.swap_item()
+        
+        return  
+
+        
+        # then go left
+        # if the held item is greater than the list item 
+        # go right again
+        
 
 
 if __name__ == "__main__":
